@@ -3,11 +3,11 @@
 <head>
     <title>afdrukken accounts</title>
 </head>
-<body>
+<table>
 <?php require_once "nav.php" ;
 require_once 'dbConnect.php';?>
 
-<h1>afdrukken account</h1>
+<h1>Afdrukken accounts</h1>
 <p>Dit zijn alle gegevens uit de accountstabel.</p>
 <?php
 
@@ -16,37 +16,38 @@ $accounts = $conn->prepare("
     select * from accounts ");
 $accounts->execute();
 
+
+echo '<table>';
+
+echo "<tr>
+    <th>Account ID</th>
+    <th>Naam op account</th>
+    <th>Password account</th>
+    <th>Geboortedatum account </th>
+    <th>Account mail</th>
+  </tr>";
+
 $result = $accounts->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row) {
 
-    echo "<table>";
+    echo " <tr>";
 
-    echo "<tr>
-    <th>accounts ID</th>
-    <th>Naam op account</th>
-    <th>password account</th>
-    <th>geboortedatum account </th>
-    <th>account mail</th>
-  </tr>";
+    echo "<td>" .  $row['id'] . "</td>" ;
 
-    echo "<tr>";
+    echo "<td>" .  $row['fullname'] . "</td>" ;
 
-    echo "<td>" .  $row['id'] . "</td>" . "<br>";
+    echo "<td>" . $row['password'] . "</td>" ;
 
-    echo "<td>" .  $row['fullname'] . "</td>" . "<br>";
+    echo "<td>" .  $row['birthday'] . "</td>" ;
 
-    echo "<td>" . $row[''] . "</td>" . "<br>";
+    echo "<td>" .  $row['mail'] . "</td>" ;
 
-    echo "<td>" .  $row['birthday'] . "</td>" . "<br>";
-
-    echo "<td>" .  $row['mail'] . "</td>" . "<br>";
-
-    echo "</tr>";
-    echo "</table>";
+    echo "</tr>
+";
 }
 
 
 ?>
-
+</table>
 </body>
 </html>

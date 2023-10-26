@@ -69,7 +69,7 @@ table {
     width: 100%;
 }
 
-table td, table th {
+#table tr td, #table tr th {
     border: 1px solid #ddd;
     padding: 8px;
 }

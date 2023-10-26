@@ -10,7 +10,7 @@
     <form action="authenticate.php" method="post" >
         <label for="mail">
         </label>
-        <input type="email" name="mail" placeholder="mail" id="mail" required>
+        <input type="email" name="mail" placeholder="Mail" id="mail" required>
         <label for="password">
         </label>
         <input type="password" name="password" placeholder="Password" id="password" required>

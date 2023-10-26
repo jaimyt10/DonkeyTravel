@@ -9,8 +9,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 require_once 'nav.php';
 ?>
-<H1>Lorem Ipsum</H1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, autem dolorem eos et expedita fugit ipsum minima modi natus quaerat recusandae saepe, tempore totam voluptas? Natus, sit, voluptate. Velit?</p>
+<H1>Donkey Travel</H1>
 
+<H2>Welkom <?php echo $_SESSION['fullname']?>!</H2>
 
 

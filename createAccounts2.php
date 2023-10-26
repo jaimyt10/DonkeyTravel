@@ -19,7 +19,7 @@ $mail=$_POST["mail"];
 
 $account = new Accounts($fullname, $birthday, $password, $mail);
 $account->Create();
-
+$_SESSION['fullname'] = $fullname;
 header("location:index.php");
 ?>
 </body>

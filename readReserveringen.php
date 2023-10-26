@@ -15,36 +15,36 @@ global $conn;
 $reserveringen = $conn->prepare("
     select * from reserveringen ");
 $reserveringen->execute();
+echo "<table>";
 
-$result = $reserveringen->fetchAll(PDO::FETCH_ASSOC);
-foreach($result as $row) {
-
-    echo "<table>";
-
-    echo "<tr>
+echo "<tr>
     <th>Reserverings ID</th>
     <th>Naam op reservering</th>
     <th>Datum reservering</th>
     <th>Datum en tijd reservering aangemaakt</th>
     <th>Reserverings soort</th>
   </tr>";
+$result = $reserveringen->fetchAll(PDO::FETCH_ASSOC);
+foreach($result as $row) {
+
+
 
     echo "<tr>";
 
-    echo "<td>" .  $row['reser_id'] . "</td>" . "<br>";
+    echo "<td>" .  $row['reser_id'] . "</td>" ;
 
-    echo "<td>" .  $row['reser_naam'] . "</td>" . "<br>";
+    echo "<td>" .  $row['reser_naam'] . "</td>" ;
 
-    echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
+    echo "<td>" . $row['reser_datum_tijd'] . "</td>" ;
 
-    echo "<td>" . $row['reser_datum_tijd_aan'] . "</td>" . "<br>";
+    echo "<td>" . $row['reser_datum_tijd_aan'] . "</td>" ;
 
-    echo "<td>" .  $row['reser_type'] . "</td>" . "<br>";
+    echo "<td>" .  $row['reser_type'] . "</td>" ;
 
     echo "</tr>";
-    echo "</table>";
-}
 
+}
+echo "</table>";
 
 ?>
 
