@@ -17,7 +17,7 @@ $password=$_POST["password"];
 $mail=$_POST["mail"];
 
 
-$account = new Accounts($fullname, $birthday, $password, $mail);
+$account = new Accounts($fullname, $birthday, password_hash($password, PASSWORD_DEFAULT), $mail);
 $account->Create();
 $_SESSION['fullname'] = $fullname;
 header("location:index.php");
