@@ -82,7 +82,7 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #9F45B0;
+    background-color: #0044b3;
     color: white;
 }
 
@@ -102,7 +102,7 @@ table th {
 
 #form form input[type=submit] {
     width: 100%;
-    background-color: #9F45B0;
+    background-color: #0044b3;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -112,13 +112,15 @@ table th {
 }
 
 #form form input[type=submit]:hover {
-    background-color: #9F45B0;
+    background-color: #0044b3;
 }
 
 #form {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    width: 70%;
+    margin-left: 20px;
 }
 
 
@@ -148,7 +150,7 @@ table th {
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #9F45B0;
+    background-color: #0044b3;
     color: #ffffff;
 }
 .login form input[type="password"], .login form input[type="email"] {
@@ -162,7 +164,7 @@ table th {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #9F45B0;
+    background-color: #0044b3;
     border: 0;
     cursor: pointer;
     font-weight: bold;
@@ -170,6 +172,6 @@ table th {
     transition: background-color 0.2s;
 }
 .login form input[type="submit"]:hover {
-    background-color: #9F45B0;
+    background-color: #0044b3;
     transition: background-color 0.2s;
 }

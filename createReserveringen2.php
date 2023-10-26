@@ -17,7 +17,7 @@ $reser_datum_tijd_aan=$_POST["reser_datum_tijd_aan"];
 $reser_type=$_POST["reser_type"];
 
 
-$reservering = new Reservering($reser_naam, $reser_datum_tijd, $reser_type, $reser_datum_tijd_aan);
+$reservering = new Reservering($reser_naam, $reser_datum_tijd,  $reser_datum_tijd_aan,$reser_type);
 $reservering->Create();
 echo "Het volgende object is gemaakt: <br/>";
 
@@ -46,7 +46,7 @@ foreach($result as $row) {
 
     echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
 
-    echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
+    echo "<td>" . $row['reser_datum_tijd_aan'] . "</td>" . "<br>";
 
     echo "<td>" .  $row['reser_type'] . "</td>" . "<br>";
 

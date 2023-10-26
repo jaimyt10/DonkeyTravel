@@ -7,7 +7,7 @@
 <?php require_once "nav.php" ;
 require_once 'dbConnect.php';?>
 
-<h1>afdrukken reserveringen</h1>
+<h1>Afdrukken reserveringen</h1>
 <p>Dit zijn alle gegevens uit de reserveringentabel.</p>
 <?php
 
@@ -37,7 +37,7 @@ foreach($result as $row) {
 
     echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
 
-    echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
+    echo "<td>" . $row['reser_datum_tijd_aan'] . "</td>" . "<br>";
 
     echo "<td>" .  $row['reser_type'] . "</td>" . "<br>";
 

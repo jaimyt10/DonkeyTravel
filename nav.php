@@ -25,6 +25,15 @@
             <a href="searchReserveringen.php">Search</a>
         </div>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn">Accounts</button>
+        <div class="dropdown-content">
+            <a href="readAccounts.php">Read</a>
+            <a href="updateAccountsFormulier1.php">Update</a>
+            <a href="deleteAccounts.php">Delete</a>
+            <a href="searchAccounts.php">Search</a>
+        </div>
+    </div>
 
     <a href="logout.php">Logout</a>
 

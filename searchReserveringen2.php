@@ -15,26 +15,32 @@ $reservering->Search();
 
     if ($result) {
 
-        $reservering = new Reservering($result["reser_id"], $result["reser_naam"], $result["reser_datum_tijd"], $result["reser_datum_tijd_aan"], $result["reser_type"]);
+        $reservering = new Reservering( $result["reser_naam"], $result["reser_datum_tijd"], $result["reser_datum_tijd_aan"], $result["reser_type"]);
 
         echo "<table>";
 
+        echo "<tr>
+    <th>Reserverings ID</th>
+    <th>Naam op reservering</th>
+    <th>Datum reservering</th>
+    <th>Datum en tijd reservering aangemaakt</th>
+    <th>Reserverings soort</th>
+  </tr>";
+
         echo "<tr>";
 
-        echo "<td>" . "Reserverings ID: " . $reservering->reser_id . "</td>" . "<br>";
+        echo "<td>" .  $reser_id . "</td>" . "<br>";
 
-        echo "<td>" . "Naam op reservering: " . $reservering->reser_naam . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_naam . "</td>" . "<br>";
 
-        echo "<td>" . "Datum reservering: " . $reservering->reser_datum_tijd . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_datum_tijd . "</td>" . "<br>";
 
-        echo "<td>" . "Datum en tijd reservering aangemaakt: " . $reservering->reser_datum_tijd_aan . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_type . "</td>" . "<br>";
 
-        echo "<td>" . "Reserverings soort: " . $reservering->reser_type . "</td>" . "<br>";
+        echo "<td>" .  $reservering->reser_datum_tijd_aan      . "</td>" . "<br>";
 
         echo "</tr>";
         echo "</table>";
-
-
 }
 ?>
 

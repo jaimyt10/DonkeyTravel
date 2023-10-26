@@ -15,8 +15,7 @@
         </label>
         <input type="password" name="password" placeholder="Password" id="password" required>
 
-        <p>Need to create an account? <a href="Register-form.php">Register here</a>.</p>
-        <p>Need to change password? <a href="Changepassword-form.php">Change here</a>.</p>
+        <p>Need to create an account? <a href="createAccounts.php">Register here</a>.</p>
 
         <input type="submit" name="login">
     </form>
