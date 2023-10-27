@@ -1,6 +1,7 @@
 <?php
 require_once "nav.php" ;
-
+?><h1>Search reservering</h1>
+<?php
 require_once "dbConnect.php";
 require "Reservering.php";
 
@@ -29,15 +30,15 @@ $reservering->Search();
 
         echo "<tr>";
 
-        echo "<td>" .  $reser_id . "</td>" . "<br>";
+        echo "<td>" .  $reser_id . "</td>" ;
 
-        echo "<td>" . $reservering->reser_naam . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_naam . "</td>" ;
 
-        echo "<td>" . $reservering->reser_datum_tijd . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_datum_tijd . "</td>";
 
-        echo "<td>" . $reservering->reser_type . "</td>" . "<br>";
+        echo "<td>" . $reservering->reser_type . "</td>" ;
 
-        echo "<td>" .  $reservering->reser_datum_tijd_aan      . "</td>" . "<br>";
+        echo "<td>" .  $reservering->reser_datum_tijd_aan . "</td>" ;
 
         echo "</tr>";
         echo "</table>";

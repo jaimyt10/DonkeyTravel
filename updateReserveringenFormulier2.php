@@ -40,25 +40,28 @@
         echo "<div id='form'> <form  class='form' action='updateReserveringenFormulier3.php' method='post'>";
         foreach ($reserveringen as $reservering) {
             // reser_id mag niet gewijzigd worden
-            echo "reser_id: <input type='text' ";
+            echo "ID: <input type='text' ";
             echo "name='reser_id'";
             echo "value= '" . $reservering["reser_id"] . " '";
             echo " readonly> <br />";
     
-            echo "reser_naam: <input type='text' ";
+            echo "Naam op reservering: <input type='text' ";
             echo "name='reser_naam'";
             echo "value= '" . $reservering["reser_naam"] . "' ";
-            echo " > <br />";
+            echo " readonly> <br />";
     
-            echo "reser_datum_tijd: <input type='text' ";
+            echo "Datum tijd reservering: <input type='date' ";
             echo "name='reser_datum_tijd'";
             echo "value= '" . $reservering["reser_datum_tijd"] . "' ";
             echo " > <br />";
     
-            echo "reser_type: <input type='text' ";
-            echo "name='reser_type'";
-            echo "value= '" . $reservering["reser_type"] . "' ";
-            echo " > <br />";
+            echo "Reservering type:
+             <select id='reser_type' name='reser_type' value= '" . $reservering["reser_type"] . "'>
+        <option value='enkel'>Enkeltje</option>
+        <option value= 'retour'>Retourtje</option>
+        <option value='rondreis'>Rondreisje</option>
+    </select>
+              <br />";
 
         }
         echo "<input type='submit' name='submit_button' value='Verzenden'>";

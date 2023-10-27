@@ -21,6 +21,7 @@ $dell_art = new Reservering();
 
 $dell_art->Delete($reser_id);
 
+header('Location: home.php');
 
 
 

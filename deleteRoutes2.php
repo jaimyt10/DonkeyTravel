@@ -1,20 +1,18 @@
 <!doctype html>
 <html>
-<!-- Anjo Eijeriks -->
 <head>
-    <title>delete account</title>
+    <title>delete route</title>
 </head>
 <body>
 <?php require_once "nav.php" ?>
 
-<h1>delete account</h1>
+<h1>Delete Route</h1>
 
 <?php
 
-// Anjo Eijeriks
-require "Accounts.php";                    // nodig om object te maken
+require "Routes.php";                    // nodig om object te maken
 $id = $_POST["id"];    // uitlezen vakje van deleteStudentForm1
-$dell_art = new Accounts();
+$dell_art = new Routes();
 
 
 
@@ -22,7 +20,6 @@ $dell_art = new Accounts();
 $dell_art->Delete($id);
 
 header('Location: home.php');
-
 
 
 ?>

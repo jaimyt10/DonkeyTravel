@@ -34,7 +34,16 @@
             <a href="searchAccounts.php">Search</a>
         </div>
     </div>
-
+    <div class="dropdown">
+        <button class="dropbtn">Routes</button>
+        <div class="dropdown-content">
+            <a href="createRoutes.php">Create</a>
+            <a href="readRoutes.php">Read</a>
+            <a href="updateRoutesFormulier1.php">Update</a>
+            <a href="deleteRoutes.php">Delete</a>
+            <a href="searchRoutes.php">Search</a>
+        </div>
+    </div>
     <a href="logout.php">Logout</a>
 
 </div>

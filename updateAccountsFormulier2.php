@@ -40,27 +40,27 @@
         echo "<div id='form'> <form  class='form' action='updateAccountsFormulier3.php' method='post'>";
         foreach ($accounts as $Accounts) {
             // id mag niet gewijzigd worden
-            echo "id: <input type='text' ";
+            echo "ID: <input type='text' ";
             echo "name='id'";
             echo "value= '" . $Accounts["id"] . " '";
             echo " readonly> <br />";
     
-            echo "fullname: <input type='text' ";
+            echo "Fullname: <input type='text' ";
             echo "name='fullname'";
             echo "value= '" . $Accounts["fullname"] . "' ";
             echo " > <br />";
     
-            echo "birthday: <input type='text' ";
+            echo "Birthday: <input type='date' ";
             echo "name='birthday'";
             echo "value= '" . $Accounts["birthday"] . "' ";
             echo " > <br />";
 
-            echo "password: <input type='text' ";
+            echo "Password: <input type='text' ";
             echo "name='password'";
             echo "value= '" . $Accounts["password"] . "' ";
-            echo " > <br />";
+            echo " readonly> <br />";
 
-            echo "mail: <input type='text' ";
+            echo "Email: <input type='text' ";
             echo "name='mail'";
             echo "value= '" . $Accounts["mail"] . "' ";
             echo " > <br />";

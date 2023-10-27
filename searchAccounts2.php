@@ -1,6 +1,7 @@
 <?php
 require_once "nav.php" ;
-
+?><h1>Search accounts</h1>
+<?php
 require_once "dbConnect.php";
 require "Accounts.php";
 
@@ -19,17 +20,25 @@ $Accounts->Search();
 
         echo "<table>";
 
+        echo "<tr>
+    <th>Account ID</th>
+    <th>Account naam</th>
+    <th>Account geboortedatum</th>
+    <th>Account password (hashed)</th>
+    <th>Account email</th>
+  </tr>";
+
         echo "<tr>";
 
-        echo "<td>" . "Accounts ID: " . $id . "</td>" . "<br>";
+        echo "<td>" .  $id . "</td>" ;
 
-        echo "<td>" . "Naam op Accounts: " . $Accounts->fullname . "</td>" . "<br>";
+        echo "<td>" .  $Accounts->fullname . "</td>";
 
-        echo "<td>" . "accounts geboortedatum: " . $Accounts->birthday . "</td>" . "<br>";
+        echo "<td>" .  $Accounts->birthday . "</td>" ;
 
-        echo "<td>" . "accounts password: " . $Accounts->password . "</td>" . "<br>";
+        echo "<td>" .  $Accounts->password . "</td>";
 
-        echo "<td>" . "Accounts mail: " . $Accounts->mail . "</td>" . "<br>";
+        echo "<td>" . $Accounts->mail . "</td>" ;
 
         echo "</tr>";
         echo "</table>";

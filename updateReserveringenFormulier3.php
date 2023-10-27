@@ -1,6 +1,7 @@
 <?php
 require_once "nav.php" ;
-
+?><h1>Update reservering</h1>
+<?php
 require_once "dbConnect.php";
 require_once "Reservering.php";
 
@@ -27,5 +28,36 @@ $sql->execute([
 ]);
 
 echo "Reservering succesvol geüpdatet!";
+$reserveringen = $conn->prepare("
+    select * from reserveringen where  reser_naam = '$reser_naam'");
+$reserveringen->execute();
 
+$result = $reserveringen->fetchAll(PDO::FETCH_ASSOC);
+foreach($result as $row) {
+
+    echo "<table>";
+
+    echo "<tr>
+    <th>Reserverings ID</th>
+    <th>Naam op reservering</th>
+    <th>Datum reservering</th>
+    <th>Datum en tijd reservering aangemaakt</th>
+    <th>Reserverings soort</th>
+  </tr>";
+
+    echo "<tr>";
+
+    echo "<td>" .  $row['reser_id'] . "</td>" . "<br>";
+
+    echo "<td>" .  $row['reser_naam'] . "</td>" . "<br>";
+
+    echo "<td>" . $row['reser_datum_tijd'] . "</td>" . "<br>";
+
+    echo "<td>" . $row['reser_datum_tijd_aan'] . "</td>" . "<br>";
+
+    echo "<td>" .  $row['reser_type'] . "</td>" . "<br>";
+
+    echo "</tr>";
+    echo "</table>";
+}
 ?>
