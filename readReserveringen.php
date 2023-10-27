@@ -44,9 +44,8 @@ foreach($result as $row) {
     echo "</tr>";
 
 }
-echo "</table>";
 
 ?>
-
+</table>
 </body>
 </html>

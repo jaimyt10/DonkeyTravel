@@ -1,5 +1,6 @@
 <?php
 require_once 'dbConnect.php';
+$login = FALSE;
 
 if(isset($_POST["login"]))
 {
@@ -9,24 +10,32 @@ if(isset($_POST["login"]))
     }
     else
     {
-        $query = "SELECT * FROM accounts WHERE mail = :mail AND password = :password";
-        $statement = $conn->prepare($query);
-        $statement->execute(
-            array(
-                'mail'     =>     $_POST["mail"],
-                'password'     =>     $_POST["password"]
-            )
-        );
-        $count = $statement->rowCount();
-        if($count > 0)
-        {
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION["mail"] = $_POST["mail"];
-            header("location:home.php");
+        $query = "SELECT * FROM accounts WHERE mail = :mail";
+        $values = [':mail' => $_POST["mail"]];
+        try {
+            $statement = $conn->prepare($query);
+
+            $statement->execute($values);
+
         }
-        else
+        catch (PDOException $e)
         {
-            $message = '<label>Wrong Data</label>';
+            /* Query error. */
+            echo 'Query error.';
+            die();
         }
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        if (is_array($row))
+        {
+            echo $_POST['password'];
+            if (password_verify($_POST['password'], $row['password']))
+            {
+                /* The password is correct. */
+                $_SESSION['loggedin'] = TRUE;
+                header('Location: home.php');
+
+            }
+        }
+
     }
 }
