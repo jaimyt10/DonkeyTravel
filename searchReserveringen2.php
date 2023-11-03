@@ -16,7 +16,7 @@ $reservering->Search();
 
     if ($result) {
 
-        $reservering = new Reservering( $result["reser_naam"], $result["reser_datum_tijd"], $result["reser_datum_tijd_aan"], $result["reser_type"]);
+        $reservering = new Reservering( $result["reser_naam"], $result["reser_datum_tijd"], $result["reser_type"], $result["reser_datum_tijd_aan"]);
 
         echo "<table>";
 
